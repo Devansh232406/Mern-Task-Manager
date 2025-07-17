@@ -40,11 +40,6 @@ app.get("/api/tasks", async (req, res) => {
   res.json(tasks);
 });
 
-app.get("/api/tasks", async (req, res) => {
-  const tasks = await Task.find();
-  res.json(tasks);
-});
-
 //Add a task
 app.post('/api/tasks',async(req,res)=>{
   const {title,difficulty} = req.body;
