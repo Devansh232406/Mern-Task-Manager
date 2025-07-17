@@ -35,7 +35,7 @@ Now with a beautifully integrated 📅 **Calendar View** to visualize your tasks
 ---
 
 
-##✨ Future Plans
+## ✨ Future Plans
 - User Authentication (JWT-based login/signup)
 - Due date reminders
 - Dark mode support 🌙
