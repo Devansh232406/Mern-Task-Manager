@@ -114,7 +114,7 @@ const [tasks, settasks] = useState([]);
   // Delete task
   const handleDeletetask = async (id) => {
     try {
-      await axios.delete(`/api/tasks/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/${id}`);
       settasks((prev) => prev.filter((task) => task._id !== id));
       setMsg(" Task Deleted❗");
       setTimeout(() => setMsg(""), 2000);
