@@ -78,7 +78,7 @@ const [tasks, settasks] = useState([]);
 
   const fetchAlltasks = async () => {
     try {
-      const res = await axios.get("/api/tasks");
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/tasks`);
       if (Array.isArray(res.data)) {
         settasks(res.data);
       } else {
@@ -97,7 +97,7 @@ const [tasks, settasks] = useState([]);
     if (!difficulty) return alert("⚠️ Please select a difficulty level !");
 
     try {
-      const res = await axios.post("/api/tasks", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/tasks`, {
         title: newtask.trim(),
         difficulty: difficulty,
         status: "todo",
@@ -143,7 +143,7 @@ const [tasks, settasks] = useState([]);
 
     try {
       console.log("🛠️ Updating", editingId, "with text:", editText);
-      const res = await axios.put(`/api/tasks/${editingId}`, {
+      const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/tasks/${editingId}`, {
         title: editText.trim(),
         difficulty: editDifficulty,
       });
@@ -199,7 +199,7 @@ const [tasks, settasks] = useState([]);
       const taskToUpdate = tasks.find((task) => task._id === id);
       if (!taskToUpdate) return;
 
-      const res = await axios.put(`/api/tasks/${id}`, {
+      const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/tasks/${id}`, {
         title: taskToUpdate.title,
         difficulty: taskToUpdate.difficulty,
         status: newStatus,
