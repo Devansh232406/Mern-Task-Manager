@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faClock,
-  faCalendarDays,
-  faGear,
+
   faTrash,
   faPenSquare,
 } from "@fortawesome/free-solid-svg-icons";
@@ -75,7 +71,7 @@ const [tasks, settasks] = useState([]);
     };
   };
   // Fetch All tasks
-
+console.log("Backend URL:", process.env.REACT_APP_API_BASE_URL);
   const fetchAlltasks = async () => {
     try {
       const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/tasks`);

@@ -1,12 +1,7 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
-import {
-  faHome,
-  faClock,
-  faCalendarDays,
-  faGear,
-} from "@fortawesome/free-solid-svg-icons";
+import {faHome,faCalendarDays} from "@fortawesome/free-solid-svg-icons";
 import CalendarHero from "./components/CalendarHero";
 import CalendarPage from "./components/CalendarPage";
 import Dashboard from "./components/DashBoard";
