@@ -36,8 +36,8 @@ Now with a beautifully integrated 📅 **Calendar View** to visualize your tasks
 
 
 **✨ Future Plans:**
--User Authentication (JWT-based login/signup)
--Due date reminders
--Dark mode support 🌙
--Task filtering and search
--Mobile-first UI enhancements
+- User Authentication (JWT-based login/signup)
+- Due date reminders
+- Dark mode support 🌙
+- Task filtering and search
+- Mobile-first UI enhancements
