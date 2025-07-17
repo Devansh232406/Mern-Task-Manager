@@ -32,13 +32,9 @@ Now with a beautifully integrated 📅 **Calendar View** to visualize your tasks
 - MongoDB + Mongoose  
 - CORS, dotenv, express.json
 
-- ✨ Future Plans
-User Authentication (JWT-based login/signup)
-
-Due date reminders
-
-Dark mode support 🌙
-
-Task filtering and search
-
-Mobile-first UI enhancements
+**✨ Future Plans:**
+-User Authentication (JWT-based login/signup)
+-Due date reminders
+-Dark mode support 🌙
+-Task filtering and search
+-Mobile-first UI enhancements
