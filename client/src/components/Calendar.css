@@ -1,0 +1,181 @@
+/* -----------------------------------
+   📅 Custom Calendar Styling
+----------------------------------- */
+
+
+.calendar-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 80%;
+}
+.rbc-calendar {
+  background-color: rgb(255, 252, 252);
+  border-radius: 1rem;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  height:46rem;
+  width:70rem;
+  border-radius: 33px;
+}
+
+.calendar-title {
+  font-size: 2.3rem;
+  transform: translateY(-20px);
+  font-weight: 600;
+  letter-spacing: 7px;
+  color: #bca4ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.rbc-btn-group:last-of-type {
+  display: none;
+}
+.calendar-wrapper h2{
+    color:#e3e3ff
+}
+/* Header (Month, Week, Day) */
+.rbc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+.rbc-toolbar-label {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #331a79;
+  margin-right: 14rem;
+}
+.rbc-toolbar button {
+  background-color: #331a79;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.3rem;
+  margin: 0 0.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: large;
+}
+
+.rbc-toolbar button:hover {
+  background-color: #4f2bc3;
+  color: #bba2ff;
+}
+
+
+
+/* Days & Time Grid */
+.rbc-header{
+  background-color: #e3e3ff;
+  color: #000000;
+  padding: 0.5rem;
+  font-weight: 500;
+  border: none;
+  text-align: center;
+}
+.rbc-header span{
+    color:#340067;
+    font-size:1rem;
+}
+.rbc-day-bg {
+  background-color: rgba(195, 62, 62, 0.03);
+  transition: background 0.3s ease;
+}
+
+.rbc-day-bg:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+.rbc-button-link{
+  font-size: larger;
+  font-family: Poppins;
+}
+.rbc-date-cell {
+  pointer-events: none;
+}
+
+
+
+
+.rbc-time-slot {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-today {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.rbc-off-range-bg {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.rbc-selected {
+  background-color: #000e18 !important;
+}
+
+/* Responsive height */
+.rbc-time-view {
+  min-height: 500px;
+}
+/* ----------------------------------------CalendarHero----------------------------- */
+
+.calendar-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  height: 90vh;
+  width: 100%;
+
+}
+.calendar-image{
+  width: 130%;
+  height: auto;
+  max-width: 700px;
+  transform: translateX(2rem);
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.cal-hero-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+  width:85%;
+  margin-right: 4rem;
+  text-align: right;
+animation: moveLeft-2 3s forwards;
+}
+.calendar-header{
+  font-size: 3.4rem;
+  transform: translateY(-40%);
+  font-weight: 500;
+  color:#000000;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.calendar-description{
+  font-size: 1.2rem;
+  transform: translateY(-5rem);
+}
+@keyframes moveLeft-2{
+  from{
+      opacity: 0;  
+      transform: translateX(80%);
+  }
+  to{
+      opacity: 100%; 
+      transform: translateX(0);
+  }
+}

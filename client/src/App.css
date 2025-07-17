@@ -1,0 +1,793 @@
+body,
+html {
+
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  background: white;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: auto;
+  /* Let container grow with content */
+
+  background-color: #6927db;
+  padding: 0rem 0rem;
+  box-sizing: border-box;
+
+  /* ✅ Let content grow and scroll naturally */
+  /* REMOVE overflow: visible */
+}
+
+.Main-1st {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+}
+
+.header {
+  font-weight: 600;
+  animation-name: moveRight;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  font-family: Poppins;
+  color: #beb9ff;
+  letter-spacing: 5px;
+}
+
+.Main-2nd {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* Let children grow vertically */
+  width: 100%;
+  height: auto;
+  /* Let container grow with content */
+
+}
+
+
+
+.Sub-Right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  width: 85%;
+  border-radius: 35px;
+  margin-top: 3%;
+
+}
+
+
+.part1 {
+  background: rgb(170, 191, 255);
+
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0%;
+  border-radius: 23px;
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+
+
+  animation-name: moveDown;
+  animation-duration: 3s;
+}
+
+
+
+.part2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  background: linear-gradient(to bottom, rgb(170, 191, 255), rgb(26, 7, 108));
+  /* 👈 transparent gradient */
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  border-radius: 23px;
+
+  /* 💎 Glassmorphism sauce */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* Safari compatibility */
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  /* 🔽 Smooth appear animation */
+  animation-name: moveUp;
+  animation-duration: 4s;
+  color: #000000;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  transform: translateY(-10%);
+  margin-left: 10%;
+  font-size: medium;
+  animation-name: moveRight;
+  animation-duration: 3s;
+
+}
+
+.functions h2 {
+  color: #002756;
+  font-weight: 400;
+}
+
+.h {
+  margin-right: 15%;
+}
+
+.functions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #000000;
+  height: auto;
+
+}
+
+.p {
+  margin-bottom: 5.5px;
+}
+
+.functions h3 {
+  font-size: smaller;
+  margin-top: 19%;
+  margin-bottom: 0;
+  font-weight: 450;
+  color: #000000;
+}
+
+h2 {
+  margin-top: 5px;
+  font-weight: 300;
+  color: black;
+}
+
+
+.create-button {
+  padding: 1.5% 2%;
+  border-radius: 22px;
+  font-size: larger;
+  color: rgb(140, 138, 255);
+  border: 3px solid rgb(106, 0, 255);
+  background: rgb(43, 0, 103);
+  background-size: 800% 800%;
+  animation: gradientMove 6s ease infinite;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.459);
+}
+
+.create-button:hover {
+  background: rgb(61, 0, 147);
+  color: rgb(137, 206, 255);
+  background-size: 800% 800%;
+  animation: gradientMove 6s ease infinite;
+  border: 3px solid rgb(0, 179, 255);
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Add this */
+  bottom: 0;
+  /* Add this */
+  width: 100vw;
+  /* More reliable than 100% in this case */
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+
+/* Modal Content Box */
+.modal-content {
+  background: linear-gradient(175deg, rgb(180, 146, 255), rgb(16, 0, 120));
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 33vh;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal-content input {
+  width: 95%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 24px;
+  outline: none;
+  border: none;
+}
+
+
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+.Popbtn1,
+.Popbtn2,
+.Popbtn3 {
+  background-color: rgb(221, 221, 221);
+  color: #000e20;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.8rem;
+}
+
+.Popbtn-add {
+  background-color: rgb(88, 68, 205);
+  color: aliceblue;
+}
+
+.Popbtn-cancel {
+  background-color: rgb(222, 12, 12);
+  color: aliceblue;
+}
+
+.Todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 92.5%;
+  border-radius: 25px;
+  margin-left: 10px;
+
+  min-height: 100px;
+  /* or any value */
+  flex-grow: 1;
+}
+
+.InProgress {
+  min-height: 100px;
+  /* or any value */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  border-radius: 25px;
+ 
+}
+
+.Done {
+  min-height: 100px;
+  /* or any value */
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: rgb(0, 4, 89);
+  font-weight: 400;
+}
+
+.column {
+  display: flex;
+  padding-bottom: 2%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 1.8% 1%;
+  background: rgb(198, 221, 255);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 10px 8px 23px rgba(0, 0, 0, 0.437);
+
+  /* 🧼 Remove this if added anywhere: */
+  /* overflow: auto; ❌ */
+}
+
+.dropdown-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dropdown-wrapper button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+}
+
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: #340564;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  width: 11rem;
+  border: 2px rgb(147, 55, 203) solid;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  /* ✅ Fills full width of parent */
+  text-align: left;
+  /* ✅ Aligns text to the left edge */
+  padding: 12px 30px;
+  /* ✅ Add some comfy spacing inside */
+  box-sizing: border-box;
+  /* ✅ Prevents overflow due to padding */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: Poppins;
+}
+ #id2{
+  margin-right: 8.7rem;
+}
+.dropdown-menu button * {
+  width: 100%;
+  display: block;
+
+}
+
+.dropdown-menu button:hover {
+  background-color: #1e3466;
+}
+
+.Sub-Left ul li a {
+  color: rgb(0, 0, 0);
+}
+
+.Sub-Left ul li {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 13px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Sub-Left ul li:hover {
+  background-color: #00ffae;
+
+}
+
+.firstbtn {
+  display: block;
+  /* Make it take full width if inside dropdown */
+  width: 100%;
+  /* Full width inside parent */
+  padding: 10px 20px;
+  border-radius: 7px 7px 0 0;
+  /* top corners rounded */
+  border: none;
+  /* removes all borders */
+  border-bottom: 2px solid #0a0095;
+  /* adds only bottom border */
+  background: #340564;
+  /* ensure background is set */
+  box-sizing: border-box;
+  /* include border in width */
+  position: relative;
+  /* stacking context for border */
+  z-index: 1;
+}
+
+.secbtn {
+  border-radius: 0px 0px 7px 7px;
+}
+
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-100%) translateY(-10%);
+
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0) translateY(-10%);
+
+    opacity: 100%;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateX(-100%) translateY(-10%);
+
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0) translateY(-10%);
+
+    opacity: 100%;
+  }
+}
+
+@keyframes dropdownPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.dropdown-menu {
+  animation: dropdownPop 0.2s ease-out;
+  transition: opacity 0.2s ease;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-170%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateX(70%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+.logo {
+  margin-bottom: 3%;
+  margin-left: 1.5%;
+  font-size: 2rem;
+  animation: moveRight-hero 3s ease-in-out forwards;
+}
+
+
+.task-card {
+  border: 2px solid rgb(136, 108, 202);
+  cursor: pointer;
+  background-color: #220649;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+
+}
+
+.hero-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-right: 5%;
+  padding: 0;
+  animation: moveLeft-nav 3s ease-in-out;
+}
+
+.hero-nav ul li {
+  margin-right: 60px;
+  font-weight: 600;
+  color: #00358a;
+  font-size: 1.0rem;
+}
+
+.hero-section {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  animation: moveRight-hero 3s ease-in-out forwards;
+
+}
+
+
+.hero-div {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 173vh;
+  color: rgb(0, 0, 0);
+  background: radial-gradient(ellipse at bottom,
+      rgba(96, 165, 250, 0.4) 0%,
+      rgba(96, 165, 250, 0.2) 40%,
+      transparent 80%);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+span {
+  font-size: 3.2rem;
+  color: rgb(252, 55, 55);
+}
+
+.hero-image {
+  height: auto;
+  width: 100%;
+  transform: translateX(-7%) translateY(-12%);
+  animation: moveLeft-hero 2.8s ease-in-out;
+}
+
+.hero-text {
+  text-align: left;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4rem;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: #000000;
+}
+
+.left-hero {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 100%;
+
+}
+
+.right-hero {
+  width: 50%;
+  height: 100%;
+}
+
+@keyframes moveLeft-hero {
+  from {
+    opacity: 0%;
+    transform: translateX(90%) translateY(-12%);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateX(-7) translateY(-12%);
+  }
+}
+
+@keyframes moveLeft-nav {
+  from {
+    opacity: 0%;
+    transform: translateX(30%) translateY(-2px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateX(0) translateY(-2px);
+  }
+}
+
+@keyframes moveRight-hero {
+  from {
+    opacity: 0%;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateX(7rem);
+  }
+}
+
+.svg {
+  margin-bottom: -1px;
+}
+
+.editTab {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 15px;
+}
+
+.only-card {
+  margin-left: 1px;
+  width: 3px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  background-color: #220649;
+  color: #d2cfff;
+}
+
+.footer-part1 {
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  font-size: larger;
+}
+
+.footer li {
+  line-height: 46px;
+}
+
+.footer p {
+  line-height: 0;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+.svg2 {
+  margin-bottom: -1px;
+}
+
+.footer-part2 {
+  margin-bottom: 2%;
+}
+
+/* App.css */
+
+.navbar {
+  animation: moveDown 2.5s ease-in-out;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+#id1{
+animation: moveDown 1.5s ease-in-out;
+}
+#id2{
+animation: moveDown 2.5s ease-in-out;
+}
+#id3{
+animation: moveDown 3.5s ease-in-out;
+}
+#id4{
+animation: moveDown 4s ease-in-out;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e1e2f;
+}
+
+.navbar a:hover {
+  background-color: rgba(20, 0, 67, 0.887);
+  transform: translateY(-2px);
+  color: #90caf9;
+}
+
+.navbar a.active {
+  background-color: #00bcd4;
+  color: #ffffff;
+}
