@@ -107,10 +107,10 @@ function App() {
           <div className="footer-content f2">
             <h5>Quick Links</h5>
 
-            <li>Dashboard</li>
-            <li>Calender</li>
-            <li>Stopwatch</li>
-            <li>Settings</li>
+            <li className='links'><a href="https://www.linkedin.com/in/devansh-joshi-a9a893322/">LinkedIn</a></li>
+            <li className="links"><a href="https://github.com/Devansh232406">GitHub</a></li>
+            
+            
           </div>
           <div className="footer-content f3">
             <h5>Services</h5>
